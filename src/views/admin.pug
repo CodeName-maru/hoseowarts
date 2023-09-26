@@ -1,0 +1,10 @@
+include mixins/user
+doctype html 
+html(lang = "ko")
+    head 
+        title Hoseowarts
+    body 
+        h1 admin
+
+        each user in users
+            +user(user)
