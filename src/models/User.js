@@ -2,10 +2,7 @@ import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({
     name:String,
-    gryffindor:Number,
-    slytherin:Number,
-    ravenclaw:Number,
-    Hufflepuff:Number,
+    answerArray:[{type:Number}],
     chosenChild:Boolean
 })
 

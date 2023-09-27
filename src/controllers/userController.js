@@ -3,18 +3,16 @@ import User from "../models/User";
 export const home = (req, res)=> res.render("home");
 export const getLogin = (req, res)=> res.render("login");
 export const postLogin = async (req, res)=> {
+
     const {name} = req.body;
+    const user = new User({
+        name,
+        answerArray:[],
+        chosenChild:false
+    });
     try{
-        await User.create({
-            name,
-            gryffindor:0,
-            slytherin:0,
-            ravenclaw:0,
-            Hufflepuff:0,
-            chosenChild:false
-            
-        })
-        return res.redirect("/admin")
+        const dbUser = await user.save();
+        return res.redirect(`/${dbUser.id}/survey`)
     }
     catch(error){
         console.log(error);

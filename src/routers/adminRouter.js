@@ -1,4 +1,10 @@
 import express from "express";
-import { admin } from "../controllers/adminController";
+import { admin,getSurveyDB } from "../controllers/adminController";
+import userRouter from "./userRouter";
 
-userRouter.get("/",admin)
+const adminRouter = express.Router();
+
+adminRouter.get("/",admin)
+adminRouter.get("/surveyDB",getSurveyDB)
+
+export default adminRouter;
