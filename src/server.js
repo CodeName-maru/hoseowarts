@@ -14,5 +14,6 @@ app.use(logger);
 app.use(express.urlencoded({ extended: true }));
 
 app.use ("/",userRouter);
+app.use("/admin",adminRouter)
 
 export default app;

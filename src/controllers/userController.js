@@ -22,7 +22,11 @@ export const postLogin = async (req, res)=> {
     }
     
 };
-export const admin = async (req, res) =>{
-    const users = await User.find({});
-    return res.render("admin",{users})
+
+export const getSurvey = async (req, res) =>{
+    const { id } = req.params;
+    const users = await User.findById(id)
+    return res.render("survey")
+    
+
 }
