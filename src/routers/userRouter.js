@@ -1,5 +1,5 @@
 import express from "express";
-import {home,getLogin,postLogin,getSurvey} from "../controllers/userController.js"
+import {home,getLogin,postLogin,getSurvey,postSurvey} from "../controllers/userController.js"
 
 
 const userRouter = express.Router();
