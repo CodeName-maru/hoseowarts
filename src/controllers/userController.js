@@ -1,4 +1,5 @@
 import User from "../models/User";
+import Survey from "../models/Survey"
 
 export const home = (req, res)=> res.render("home");
 export const getLogin = (req, res)=> res.render("login");
@@ -20,11 +21,15 @@ export const postLogin = async (req, res)=> {
     }
     
 };
-
 export const getSurvey = async (req, res) =>{
+    const index = 1;
     const { id } = req.params;
     const users = await User.findById(id)
-    return res.render("survey")
+    const survey = await Survey.findOne({number:index})
     
+    return res.render("survey",{survey})
+}
 
+export const postSurvey = {
+    
 }
