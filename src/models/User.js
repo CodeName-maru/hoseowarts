@@ -3,6 +3,8 @@ import mongoose from "mongoose";
 const userSchema = new mongoose.Schema({
     name:String,
     answerArray:[{type:Number}],
+    questNum:Number,
+    result:String,
     chosenChild:Boolean
 })
 

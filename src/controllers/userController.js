@@ -1,6 +1,24 @@
 import User from "../models/User";
 import Survey from "../models/Survey"
 
+function getMode(array){
+    let result = 0;
+    let max = 0;
+    let map1 = new Map([
+        [1,0],[2,0],[3,0],[4,0]
+    ]);
+    array.forEach((element)=>{
+        map1.set(element,map1.get(element)+1)
+    })
+    for(var[key, value] of map1){
+        if(value>max){
+            max = value;
+            result = key;
+        }
+    }
+    return result;
+}
+
 export const home = (req, res)=> res.render("home");
 export const getLogin = (req, res)=> res.render("login");
 export const postLogin = async (req, res)=> {
@@ -9,6 +27,8 @@ export const postLogin = async (req, res)=> {
     const user = new User({
         name,
         answerArray:[],
+        result:"",
+        questNum:1,
         chosenChild:false
     });
     try{
@@ -21,15 +41,54 @@ export const postLogin = async (req, res)=> {
     }
     
 };
+
+let index = 1;
 export const getSurvey = async (req, res) =>{
-    const index = 1;
+    
     const { id } = req.params;
-    const users = await User.findById(id)
-    const survey = await Survey.findOne({number:index})
+    const user = await User.findById(id)
+    const survey = await Survey.findOne({number:user.questNum})
     
     return res.render("survey",{survey})
 }
 
-export const postSurvey = {
+
+
+export const postSurvey = async (req, res) => {
+    const { choice } = req.body;
+    const { id } = req.params;
+    const user = await User.findById(id)
+
+    if(choice == 0 || choice==null){
+        if (user.questNum==1){
+            await User.findByIdAndDelete(id);
+            return res.redirect(`/login`)
+        }
+        user.answerArray.pop();
+        user.questNum-=1;
+        await user.save()
+        
+        return res.redirect(`/${id}/survey`)
+    }
+
+    else{
+        if(user.questNum==3){
+            user.answerArray.push(choice);
+            user.result=getMode(user.answerArray);
+            await user.save()
+            return res.redirect(`/${id}/result`)
+        }
+        user.answerArray.push(choice);
+        user.questNum+=1;
+        await user.save()
+        return res.redirect(`/${id}/survey`)
+    }
     
+}
+
+export const result = async(req,res) =>{
+    const { id } = req.params;
+    const user = await User.findById(id)
+    const result = user.result;
+    return res.render('result',{result})
 }

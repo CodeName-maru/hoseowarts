@@ -4,6 +4,27 @@ html(lang = "ko")
     head 
         title Hoseowarts
     body
-        h1 Questions
+        div
+            h1 #{survey.question}
 
-        h3 #{survey.question}
+        div 
+            form(method="POST", id = "submit")
+                label
+                    input(type="button", value="previous", id = "pre")
+                label
+                    input(type="radio",name="choice",value=1, id = "btn1")
+                    span #{survey.answer1}
+                label   
+                    input(type="radio",name="choice",value=2)
+                    span #{survey.answer2}
+                label
+                    input(type="radio",name="choice",value=3)
+                    span #{survey.answer3}
+                label
+                    input(type="radio",name="choice",value=4)
+                    span #{survey.answer4}
+                label
+                    input(type="button", value="Next" id = "next")
+                    input(type="submit")
+        script
+            include survey.js
