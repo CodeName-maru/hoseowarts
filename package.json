@@ -8,7 +8,8 @@
     "url": "git+https://github.com/CodeName-maru/hoseowarts.git"
   },
   "scripts": {
-    "dev": "nodemon --exec babel-node src/init.js"
+    "dev": "nodemon --exec babel-node src/init.js",
+    "assets" : "webpack --config webpack.config.js"
   },
   "author": "MARU",
   "license": "MIT",
@@ -27,6 +28,8 @@
     "@babel/core": "^7.22.20",
     "@babel/node": "^7.22.19",
     "@babel/preset-env": "^7.22.20",
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.1",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
   }
 }

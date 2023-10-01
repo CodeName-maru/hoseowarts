@@ -3,28 +3,29 @@ doctype html
 html(lang = "ko")
     head 
         title Hoseowarts
+        link(rel="stylesheet", href="/css/reset.css")
+        link(rel="stylesheet", href="/css/survey.css")
     body
-        div
-            h1 #{survey.question}
+            div(id = "question")
+                h1 #{survey.question}
 
-        div 
+        
             form(method="POST", id = "submit")
-                label
-                    input(type="button", value="previous", id = "pre")
-                label
+                input(type="button", id = "pre")
+                div(id="choices")
                     input(type="radio",name="choice",value=1, id = "btn1")
-                    span #{survey.answer1}
-                label   
-                    input(type="radio",name="choice",value=2)
-                    span #{survey.answer2}
-                label
-                    input(type="radio",name="choice",value=3)
-                    span #{survey.answer3}
-                label
-                    input(type="radio",name="choice",value=4)
-                    span #{survey.answer4}
-                label
-                    input(type="button", value="Next" id = "next")
-                    input(type="submit")
-        script
-            include survey.js
+                    label(for="btn1")
+                        span #{survey.answer1}
+                    input(type="radio",name="choice",value=2,id = "btn2")
+                    label(for="btn2")
+                        span #{survey.answer2}
+                    input(type="radio",name="choice",value=3,id = "btn3")
+                    label(for="btn3")
+                        span #{survey.answer3}
+                    input(type="radio",name="choice",value=4,id = "btn4")
+                    label(for="btn4")
+                        span #{survey.answer4}
+                
+                input(type="button", id = "next")
+    script
+        include survey.js

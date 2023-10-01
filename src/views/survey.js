@@ -4,7 +4,6 @@ function onClickPre(){
     document.getElementById('submit').submit()
 }
 
-
 function onClickNext(){
     var value = document.querySelector('input[name="choice"]:checked').value
     document.getElementById('submit').submit()

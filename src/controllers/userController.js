@@ -42,7 +42,7 @@ export const postLogin = async (req, res)=> {
     
 };
 
-let index = 1;
+let index = 0;
 export const getSurvey = async (req, res) =>{
     
     const { id } = req.params;
@@ -87,6 +87,10 @@ export const postSurvey = async (req, res) => {
 }
 
 export const result = async(req,res) =>{
+    index += 1;
+    if (index%20==0){
+        user.chosenChild = true;
+    }
     const { id } = req.params;
     const user = await User.findById(id)
     const result = user.result;
