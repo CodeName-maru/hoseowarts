@@ -2,6 +2,19 @@ doctype html
 html(lang = "ko")
     head 
         title Hoseowarts
-    body 
-        h1 result 
-        h2 #{result}
+    script
+        var result = #{result}
+    body
+          
+        case result
+            when '1'
+                h1 griffindor
+            when '2'
+                h1 slyderin
+            when '3'
+                h1 huffulpuff
+            when '4'
+                h1 ravenclaw
+        a(href="http://localhost:7000/") end
+        script
+            include result.js

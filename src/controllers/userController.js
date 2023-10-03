@@ -1,5 +1,6 @@
 import User from "../models/User";
 import Survey from "../models/Survey"
+import { query } from "express";
 
 function getMode(array){
     let result = 0;
@@ -42,7 +43,7 @@ export const postLogin = async (req, res)=> {
     
 };
 
-let index = 0;
+let count = 0;
 export const getSurvey = async (req, res) =>{
     
     const { id } = req.params;
@@ -74,7 +75,11 @@ export const postSurvey = async (req, res) => {
     else{
         if(user.questNum==3){
             user.answerArray.push(choice);
-            user.result=getMode(user.answerArray);
+            if(user.result){}
+            else{
+                count += 1;
+                user.result=getMode(user.answerArray);
+            }
             await user.save()
             return res.redirect(`/${id}/result`)
         }
@@ -87,12 +92,14 @@ export const postSurvey = async (req, res) => {
 }
 
 export const result = async(req,res) =>{
-    index += 1;
-    if (index%20==0){
-        user.chosenChild = true;
-    }
     const { id } = req.params;
     const user = await User.findById(id)
     const result = user.result;
+    if (count%20==0){
+        user.chosenChild = true;
+    }
+    console.log(count)
+    
+    await user.save()
     return res.render('result',{result})
 }
