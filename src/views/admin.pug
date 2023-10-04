@@ -5,7 +5,7 @@ html(lang = "ko")
         title Hoseowarts
     body 
         h1 admin
-
+        span griffindor:#{griffindor}, slyderin:#{slyderin} ,huffulpuff:#{huffulepuff}, ravelclaw:#{ravenclaw}
         each user in users
             +user(user)
         else
