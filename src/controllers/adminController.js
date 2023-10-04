@@ -8,7 +8,6 @@ export const admin = async (req, res) =>{
     const slyderin = await User.countDocuments({result: 2})
     const huffulepuff= await User.countDocuments({result: 3})
     const ravenclaw= await User.countDocuments({result: 4})
-    console.log(griffindor)
     return res.render("admin",{users,griffindor,slyderin,huffulepuff,ravenclaw})
 }
 export const getMkSurvey = (req,res) =>{
