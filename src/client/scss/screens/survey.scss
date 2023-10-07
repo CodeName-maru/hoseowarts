@@ -1,4 +1,4 @@
-body{
+.survey{
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -6,7 +6,7 @@ body{
     justify-content: center;
     
 }
-body::before {
+.survey::before {
     position: fixed;
     top: 0;
     left: 0;
