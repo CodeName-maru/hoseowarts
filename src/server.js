@@ -13,7 +13,7 @@ app.set("views", process.cwd() + "/src/views");
 app.use(logger);
 app.use(express.urlencoded({ extended: true }));
 
-app.use(express.static(path.join(__dirname,'public')));
+app.use("/static",express.static("assets"));
 app.use ("/",userRouter);
 app.use("/admin",adminRouter);
 

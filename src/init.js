@@ -1,3 +1,4 @@
+import "regenerator-runtime";
 import "./db";
 import "./models/User";
 import app from "./server";;

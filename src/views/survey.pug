@@ -1,10 +1,9 @@
-
-doctype html
+doctype html 
 html(lang = "ko")
     head 
         title Hoseowarts
-        link(rel="stylesheet", href="/css/reset.css")
-        link(rel="stylesheet", href="/css/survey.css")
+        link(rel="stylesheet", href="../static/css/styles.css")
+    block content
     body
             div(id = "question")
                 h1 #{survey.question}
@@ -28,6 +27,4 @@ html(lang = "ko")
                 
                 input(type="button", id = "next" , value="->")
                 
-                
-    script
-        include survey.js
+    script(src="/static/js/main.js")

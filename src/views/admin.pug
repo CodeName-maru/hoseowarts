@@ -1,8 +1,7 @@
 include mixins/user
-doctype html 
-html(lang = "ko")
-    head 
-        title Hoseowarts
+extends base.pug
+
+block content
     body 
         h1 admin
         span griffindor:#{griffindor}, slyderin:#{slyderin} ,huffulpuff:#{huffulepuff}, ravelclaw:#{ravenclaw}
