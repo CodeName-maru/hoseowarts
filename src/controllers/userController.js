@@ -73,7 +73,7 @@ export const postSurvey = async (req, res) => {
     }
 
     else{
-        if(user.questNum==3){
+        if(user.questNum==15){
             user.answerArray.push(choice);
             if(user.result){}
             else{
