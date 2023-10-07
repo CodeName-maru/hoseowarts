@@ -40,39 +40,6 @@ eval("function onClickPre() {\n  try {\n    document.querySelector('input[name=\
 
 /***/ }),
 
-/***/ "./src/client/img/background.jpg":
-/*!***************************************!*\
-  !*** ./src/client/img/background.jpg ***!
-  \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"img/background.jpg\");\n\n//# sourceURL=webpack://hoseowarts/./src/client/img/background.jpg?");
-
-/***/ }),
-
-/***/ "./src/client/img/home.jpg":
-/*!*********************************!*\
-  !*** ./src/client/img/home.jpg ***!
-  \*********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"img/home.jpg\");\n\n//# sourceURL=webpack://hoseowarts/./src/client/img/home.jpg?");
-
-/***/ }),
-
-/***/ "./src/client/img/login.png":
-/*!**********************************!*\
-  !*** ./src/client/img/login.png ***!
-  \**********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"img/login.png\");\n\n//# sourceURL=webpack://hoseowarts/./src/client/img/login.png?");
-
-/***/ }),
-
 /***/ "./src/client/scss/styles.scss":
 /*!*************************************!*\
   !*** ./src/client/scss/styles.scss ***!
@@ -81,6 +48,39 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://hoseowarts/./src/client/scss/styles.scss?");
+
+/***/ }),
+
+/***/ "./src/client/img/background.jpg":
+/*!***************************************!*\
+  !*** ./src/client/img/background.jpg ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/background.jpg\";\n\n//# sourceURL=webpack://hoseowarts/./src/client/img/background.jpg?");
+
+/***/ }),
+
+/***/ "./src/client/img/home.jpg":
+/*!*********************************!*\
+  !*** ./src/client/img/home.jpg ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/home.jpg\";\n\n//# sourceURL=webpack://hoseowarts/./src/client/img/home.jpg?");
+
+/***/ }),
+
+/***/ "./src/client/img/login.png":
+/*!**********************************!*\
+  !*** ./src/client/img/login.png ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/login.png\";\n\n//# sourceURL=webpack://hoseowarts/./src/client/img/login.png?");
 
 /***/ })
 
