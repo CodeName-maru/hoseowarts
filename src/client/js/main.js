@@ -1,4 +1,4 @@
-import "../img/home.jpg"
+import "../img/home.png"
 import "../img/login.png";
 import "../img/background.jpg";
 import "../scss/styles.scss";

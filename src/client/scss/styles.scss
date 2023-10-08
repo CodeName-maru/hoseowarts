@@ -2,7 +2,7 @@
 @import "./config/_variables.scss";
 @import "./config/reset.scss";
 //components
-
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap');
 //screens
 @import "./screens/home.scss";
 @import "./screens/login.scss";
@@ -11,4 +11,7 @@
 a{
     color: inherit;
     text-decoration: none;
+}
+p,h1{
+    line-height: 1.2;
 }
