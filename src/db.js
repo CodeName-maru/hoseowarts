@@ -1,7 +1,7 @@
 require("dotenv").config() 
 import mongoose from "mongoose";
 
-mongoose.connect("mongodb+srv://MaruLee423:n36Tfj0NbZWAD5ig@cluster0.1mxqgff.mongodb.net/?retryWrites=true&w=majority",{
+mongoose.connect(DB_URL,{
     useNewUrlParser: true,
     useUnifiedTopology:true
 })
