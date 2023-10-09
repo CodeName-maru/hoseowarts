@@ -1,8 +1,9 @@
 extends base.pug
 
 block content
-    body.login 
-        h1 What's your name?
-        form(method="POST")
-            input(type="text",name="name",required)
-            input(type="submit")
+    body.background
+        div.login
+            h1 What's your name?
+            form(method="POST")
+                input(type="text",name="name",required)
+                input.custom-btn(type="submit",value="submit")

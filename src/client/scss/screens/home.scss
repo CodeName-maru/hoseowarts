@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background-color: rgb(212 201 158);
+    background: radial-gradient(ellipse,rgb(212 201 158) 30%,rgb(29,16,9));
     color: white;
 }
 
@@ -13,16 +13,28 @@
     width: 40%;
 }
 div.info{
+    height: 13%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
 div.info h1{
     font-size: 2.5rem;
 }
-
+.start{
+    height: 80%;
+    width: 10%;
+    border: 1px;
+    border-radius: 8px;
+    background-color: darkgoldenrod;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .info a{
-    display: block;
-    border: 2px;
+    font-size: 1.5rem;
+    display: inline-block;
     color: white;
+    text-align: center;
 }
