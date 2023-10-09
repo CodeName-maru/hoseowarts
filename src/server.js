@@ -1,6 +1,4 @@
 require("dotenv").config() 
-console.log(process.env)
-console.log(process.env.DB_URL)
 import express from "express";
 import morgan from "morgan";
 import userRouter from "./routers/userRouter"
