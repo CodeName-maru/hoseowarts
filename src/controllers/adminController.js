@@ -10,12 +10,3 @@ export const admin = async (req, res) =>{
     const ravenclaw= await User.countDocuments({result: 4})
     return res.render("admin",{users,griffindor,slyderin,huffulepuff,ravenclaw})
 }
-export const getMkSurvey = (req,res) =>{
-    
-    return res.render("mkSurvey")
-}
-export const postMKSurvey = async(req,res) =>{
-    const survey = req.body;
-    await Survey.create(survey);
-    return res.render("mkSurvey")
-}
