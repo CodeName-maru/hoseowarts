@@ -1,10 +1,12 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 var _mongoose = _interopRequireDefault(require("mongoose"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-_mongoose["default"].connect("mongodb://127.0.0.1:27017/hoseowarts", {
+require("dotenv").config();
+_mongoose["default"].connect(process.env.DB_URL, {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  autoIndex: false
 });
 var db = _mongoose["default"].connection;
 var handleOpen = function handleOpen() {

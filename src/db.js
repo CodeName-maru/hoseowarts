@@ -1,9 +1,12 @@
 require("dotenv").config() 
 import mongoose from "mongoose";
 
-mongoose.connect("mongodb+srv://jeonsy423:ybkX8dxgD6S4ufxg@cluster0.dzswzs4.mongodb.net/",{
+
+
+mongoose.connect(process.env.DB_URL,{
     useNewUrlParser: true,
-    useUnifiedTopology:true
+    useUnifiedTopology:true,
+    autoIndex:false
 })
 
 const db = mongoose.connection;

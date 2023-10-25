@@ -1,8 +1,11 @@
-import '@babel/plugin-transform-runtime'
 import "dotenv/config";
+import '@babel/plugin-transform-runtime'
 import "regenerator-runtime";
 import "./db";
 import "./models/User";
+import "./models/Counter";
+import "./models/Survey";
+
 import app from "./server";;
 
 

@@ -1,29 +1,46 @@
 import User from "../models/User";
 import Survey from "../models/Survey"
+import Counter from "../models/Counter";
 import { query } from "express";
 
-function getMode(array){
+
+
+function getMode(array,surveyCurrent){
+
+
     let result = 0;
     let max = 0;
-    let map1 = new Map([
-        [1,0],[2,0],[3,0],[4,0]
-    ]);
+    let map1 = new Map();
+    surveyCurrent.forEach((dorm,index)=>{
+        if(dorm<245){
+            map1.set(index+1,0)
+        }
+    })//dorm이 245보다 작으면 맵 요소 생성
     array.forEach((element)=>{
         map1.set(element,map1.get(element)+1)
+        //array 순회 하며 키값에 맞는 밸루 값에 1 더하기
     })
+    //맵에서 보기가 없으면 무슨일이 일어날지 몰랑 괜찮을거 같기도 하고
     for(var[key, value] of map1){
         if(value>max){
             max = value;
             result = key;
         }
     }
+    console.log(map1)
+    console.log(result)
     return result;
 }
 
 export const home = (req, res)=> res.render("home");
 export const getLogin = (req, res)=> res.render("login");
 export const postLogin = async (req, res)=> {
-
+    const counter = await Counter.findOneAndUpdate(
+        {_id: "userid" },
+        {$inc:{seq:1}},
+        {new:true}
+    )
+    console.log(counter)
     const {name} = req.body;
     const user = new User({
         name,
@@ -38,12 +55,11 @@ export const postLogin = async (req, res)=> {
     }
     catch(error){
         console.log(error);
-        return res.redirect("/admin");
+        return res.redirect("/login");
     }
     
 };
 
-let count = 0;
 export const getSurvey = async (req, res) =>{
     
     const { id } = req.params;
@@ -58,6 +74,11 @@ export const getSurvey = async (req, res) =>{
 export const postSurvey = async (req, res) => {
     const { choice } = req.body;
     const { id } = req.params;
+    const griffindor = await User.countDocuments({result: 1})
+    const slyderin = await User.countDocuments({result: 2})
+    const huffulepuff= await User.countDocuments({result: 3})
+    const ravenclaw= await User.countDocuments({result: 4})
+    const surveyCurrent =[griffindor,slyderin,huffulepuff,ravenclaw]
     const user = await User.findById(id)
 
     if(choice == 0 || choice==null){
@@ -77,8 +98,7 @@ export const postSurvey = async (req, res) => {
             user.answerArray.push(choice);
             if(user.result){}
             else{
-                count += 1;
-                user.result=getMode(user.answerArray);
+                user.result=getMode(user.answerArray,surveyCurrent);
             }
             await user.save()
             return res.redirect(`/${id}/result`)
@@ -86,20 +106,19 @@ export const postSurvey = async (req, res) => {
         user.answerArray.push(choice);
         user.questNum+=1;
         await user.save()
+        console.log(user)
         return res.redirect(`/${id}/survey`)
     }
+    
     
 }
 
 export const result = async(req,res) =>{
+    
     const { id } = req.params;
     const user = await User.findById(id)
     const result = user.result;
-    if (count%20==0){
-        user.chosenChild = true;
-    }
-    console.log(count)
-    
+
     await user.save()
     return res.render('result',{result})
 }

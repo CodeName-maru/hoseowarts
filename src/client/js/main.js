@@ -1,6 +1,10 @@
-import "../img/home.png"
-import "../img/login.png";
+import "../img/home.png";
 import "../img/background.jpg";
+import "../img/griffindor.png";
+import "../img/huffulepuff.png";
+import "../img/ravenclaw.png";
+import "../img/slyderin.png";
+import "../img/logo.png";
 import "../scss/styles.scss";
 import "./result.js";
 import "./survey.js";

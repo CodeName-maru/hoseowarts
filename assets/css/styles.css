@@ -1,13 +1,9 @@
 /*!**********************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/client/scss/styles.scss ***!
   \**********************************************************************************************************************/
-@import url(https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Metal+Mania&family=Noto+Serif+KR&display=swap);
 /*!**************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/client/scss/styles.scss (1) ***!
-  \**************************************************************************************************************************/
-@import url(https://fonts.googleapis.com/css2?family=Diphylleia&display=swap);
-/*!**************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/client/scss/styles.scss (2) ***!
   \**************************************************************************************************************************/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -64,7 +60,7 @@ table {
 }
 
 .home {
-  font-family: "Kalam", cursive;
+  font-family: "Metal Mania", cursive;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -74,12 +70,24 @@ table {
   color: white;
 }
 
-.home img {
-  width: 40%;
+#imgs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  height: 15%;
+}
+
+#hat {
+  width: 50%;
 }
 
 div.info {
-  height: 13%;
+  height: 15%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -87,12 +95,12 @@ div.info {
 }
 
 div.info h1 {
-  font-size: 2.5rem;
+  font-size: 6rem;
 }
 
 .start {
-  height: 80%;
-  width: 10%;
+  height: 45%;
+  width: 15%;
   border: 1px;
   border-radius: 8px;
   background-color: darkgoldenrod;
@@ -102,7 +110,7 @@ div.info h1 {
 }
 
 .info a {
-  font-size: 1.5rem;
+  font-size: 3.5rem;
   display: inline-block;
   color: white;
   text-align: center;
@@ -114,15 +122,15 @@ div.info h1 {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  font-family: "Kalam", cursive;
+  font-family: "Metal Mania", cursive;
 }
 
 .login h1 {
-  font-size: 2rem;
+  font-size: 7rem;
 }
 
 form {
-  height: 20%;
+  height: 25%;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -130,18 +138,16 @@ form {
 
 input[type=text] {
   border: none;
-  border-radius: 5px;
-  height: 90%;
-  width: 75%;
+  height: 100%;
+  width: 87%;
 }
 
 .custom-btn {
-  width: 80px;
+  width: 13%;
   height: 100%;
   color: #fff;
-  border-radius: 5px;
-  font-family: "Kalam", cursive;
-  font-size: 16px;
+  font-family: "Metal Mania", cursive;
+  font-size: 2rem;
   font-weight: 900;
   font-style: normal;
   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
@@ -205,30 +211,42 @@ span {
   align-items: center;
   justify-content: space-around;
   color: white;
-  height: 50%;
-  width: 50%;
-  font-family: "Diphylleia", serif;
+  height: 40%;
+  width: 60%;
+  font-family: "Noto Serif", serif;
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 5rem;
 }
 
 #choices {
-  font-family: "Diphylleia", serif;
+  font-family: "Noto Serif", serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100%;
-  width: 40%;
+  width: 50%;
 }
 
 #submit {
   display: flex;
   justify-content: space-around;
   width: 100%;
-  height: 30%;
+  height: 35%;
   color: white;
+}
+
+#pre {
+  width: 3%;
+  font-size: 3rem;
+  border: 10px;
+  border-radius: 5%;
+}
+
+#next {
+  width: 3%;
+  font-size: 3rem;
 }
 
 input[type=radio] + label {
@@ -240,8 +258,7 @@ input[type=radio] + label {
   background-color: #333;
   line-height: 24px;
   text-align: center;
-  font-weight: bold;
-  font-size: 13px;
+  font-size: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -266,6 +283,16 @@ input[type=button] {
 
 label {
   border-radius: 5px;
+}
+
+.result {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background: radial-gradient(ellipse, rgb(212, 201, 158) 30%, rgb(29, 16, 9));
+  color: white;
 }
 
 a {

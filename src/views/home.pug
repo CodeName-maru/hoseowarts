@@ -2,9 +2,11 @@ extends base.pug
 
 block content
     body.home
-        img(src="/static/images/home.png")
+        #imgs
+            img.logo(src="/static/images/logo.png")
+            img#hat(src="/static/images/home.png")
 
         div.info
-            h1 Which Hogwarts House You Truly Belong In?
+            h1 Which Hoseowarts House You Truly Belong In?
             div.start
                 a(href="/login") Start

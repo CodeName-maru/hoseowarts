@@ -1,0 +1,9 @@
+.result{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: radial-gradient(ellipse,rgb(212 201 158) 30%,rgb(29,16,9));
+    color: white;
+}

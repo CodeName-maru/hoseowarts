@@ -4,30 +4,29 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    font-family: 'Kalam', cursive;
+    font-family: 'Metal Mania', cursive;
 }
 .login h1 {
-    font-size: 2rem;
+    font-size: 7rem;
 }
 form{
-    height: 20%;
+    height: 25%;
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 input[type=text]{
     border: none;
-    border-radius: 5px;
-    height: 90%;
-    width: 75%;
+    height: 100%;
+    width: 87%;
 }
 .custom-btn{
-    width: 80px;
+    width: 13%;
     height: 100%;
     color: #fff;
-    border-radius: 5px;
-    font-family: 'Kalam', cursive;
-    font-size: 16px;
+
+    font-family: 'Metal Mania', cursive;
+    font-size: 2rem;
     font-weight: 900;
     font-style: normal;
     text-shadow: 0px -1px 0px rgba(0,0,0,0.4);

@@ -10,7 +10,7 @@ html(lang = "ko")
 
         
             form(method="POST", id = "submit")
-                input(type="button", id = "pre", value ="<-")
+                input(type="button", id = "pre", value ="<<")
                 div(id="choices")
                     input(type="radio",name="choice",value=1, id = "btn1")
                     label(for="btn1")
@@ -25,6 +25,6 @@ html(lang = "ko")
                     label(for="btn4")
                         span #{survey.answer4}
                 
-                input(type="button", id = "next" , value="->")
+                input(type="button", id = "next" , value=">>")
                 
     script(src="/static/js/main.js")
