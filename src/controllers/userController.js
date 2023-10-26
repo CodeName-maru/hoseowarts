@@ -6,7 +6,12 @@ import { query } from "express";
 
 
 function getMode(array,surveyCurrent){
-
+    var dict = {
+        1:"griffindor",
+        2:"slyderin",
+        3:"huffulepuff",
+        4:"ravenclaw",
+    }
 
     let result = 0;
     let max = 0;
@@ -27,9 +32,8 @@ function getMode(array,surveyCurrent){
             result = key;
         }
     }
-    console.log(map1)
-    console.log(result)
-    return result;
+
+    return dict[result];
 }
 
 export const home = (req, res)=> res.render("home");
@@ -40,14 +44,13 @@ export const postLogin = async (req, res)=> {
         {$inc:{seq:1}},
         {new:true}
     )
-    console.log(counter)
     const {name} = req.body;
     const user = new User({
         name,
         answerArray:[],
         result:"",
         questNum:1,
-        chosenChild:false
+        chosenChild:(counter.seq%15) == 0
     });
     try{
         const dbUser = await user.save();
@@ -101,6 +104,11 @@ export const postSurvey = async (req, res) => {
                 user.result=getMode(user.answerArray,surveyCurrent);
             }
             await user.save()
+            if(user.chosenChild){
+               return prophescy(req,res);
+                
+            }
+        
             return res.redirect(`/${id}/result`)
         }
         user.answerArray.push(choice);
@@ -109,7 +117,7 @@ export const postSurvey = async (req, res) => {
         console.log(user)
         return res.redirect(`/${id}/survey`)
     }
-    
+      
     
 }
 
@@ -119,6 +127,17 @@ export const result = async(req,res) =>{
     const user = await User.findById(id)
     const result = user.result;
 
+
+
     await user.save()
     return res.render('result',{result})
+}
+
+
+
+export const prophescy = async(req,res) =>{
+    
+    const { id } = req.params;
+    
+    return res.render('prophecy',{id})
 }

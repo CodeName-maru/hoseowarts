@@ -5,8 +5,7 @@ var _mongoose = _interopRequireDefault(require("mongoose"));
 require("dotenv").config();
 _mongoose["default"].connect(process.env.DB_URL, {
   useNewUrlParser: true,
-  useUnifiedTopology: true,
-  autoIndex: false
+  useUnifiedTopology: true
 });
 var db = _mongoose["default"].connection;
 var handleOpen = function handleOpen() {

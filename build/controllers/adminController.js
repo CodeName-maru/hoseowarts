@@ -4,7 +4,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.postMKSurvey = exports.getMkSurvey = exports.admin = void 0;
+exports.admin = void 0;
 var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
 var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
 var _User = _interopRequireDefault(require("../models/User"));
@@ -60,29 +60,5 @@ var admin = exports.admin = /*#__PURE__*/function () {
   }));
   return function admin(_x, _x2) {
     return _ref.apply(this, arguments);
-  };
-}();
-var getMkSurvey = exports.getMkSurvey = function getMkSurvey(req, res) {
-  return res.render("mkSurvey");
-};
-var postMKSurvey = exports.postMKSurvey = /*#__PURE__*/function () {
-  var _ref2 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee2(req, res) {
-    var survey;
-    return _regenerator["default"].wrap(function _callee2$(_context2) {
-      while (1) switch (_context2.prev = _context2.next) {
-        case 0:
-          survey = req.body;
-          _context2.next = 3;
-          return _Survey["default"].create(survey);
-        case 3:
-          return _context2.abrupt("return", res.render("mkSurvey"));
-        case 4:
-        case "end":
-          return _context2.stop();
-      }
-    }, _callee2);
-  }));
-  return function postMKSurvey(_x3, _x4) {
-    return _ref2.apply(this, arguments);
   };
 }();

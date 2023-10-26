@@ -5,7 +5,12 @@ block content
     body 
         h1 admin
         span griffindor:#{griffindor}, slyderin:#{slyderin} ,huffulpuff:#{huffulepuff}, ravelclaw:#{ravenclaw}
-        each user in users
-            +user(user)
-        else
-            li Sorry nothing found.
+        table
+            tr
+                th 이름
+                th 결과
+                th 선택받은 아이 
+                each user in users
+                    +user(user)
+                else
+                    li Sorry nothing found.

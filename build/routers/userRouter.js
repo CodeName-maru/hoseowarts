@@ -12,4 +12,5 @@ userRouter.get("/", _userController.home);
 userRouter.route("/login").get(_userController.getLogin).post(_userController.postLogin);
 userRouter.route("/:id([0-9a-f]{24})/survey").get(_userController.getSurvey).post(_userController.postSurvey);
 userRouter.get("/:id([0-9a-f]{24})/result", _userController.result);
+userRouter.get("/:id([0-9a-f]{24})/prophescy", _userController.prophescy);
 var _default = exports["default"] = userRouter;

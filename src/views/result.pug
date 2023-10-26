@@ -1,18 +1,30 @@
 extends base.pug
 
 block content
-    script
-        var result = #{result}
-    body.result   
-        case result
-            when '1'
-                img(src="/static/images/griffindor.png")
-            when '2'
-                img(src="/static/images/slyderin.png")
-            when '3'
-                img(src="/static/images/huffulepuff.png")
-            when '4'
-                img(src="/static/images/ravenclaw.png")
-                
-        a(href="/") end
-        script(src="/static/js/main.js")
+    script var result = #{result} 
+    
+    case result
+        when 'griffindor'
+            body#griffindor.result
+                div#result
+                    img(src="/static/images/griffindor.png")
+                    div.dorm Griffindor
+                a(href="/") End
+        when 'slyderin'
+            body#slyderin.result
+                div#result
+                    img(src="/static/images/slyderin.png")
+                    div.dorm Slyderin
+                a(href="/") End
+        when 'huffulepuff'
+            body#huffulepuff.result
+                div#result
+                    img(src="/static/images/huffulepuff.png")
+                    div.dorm Huffulepuff
+                a(href="/") End
+        when 'ravenclaw'
+            body#ravenclaw.result
+                div#result
+                    img(src="/static/images/ravenclaw.png")
+                    div.dorm Ravenclaw
+                a(href="/") End

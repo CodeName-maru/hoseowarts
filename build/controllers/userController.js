@@ -4,7 +4,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.result = exports.postSurvey = exports.postLogin = exports.home = exports.getSurvey = exports.getLogin = void 0;
+exports.result = exports.prophescy = exports.postSurvey = exports.postLogin = exports.home = exports.getSurvey = exports.getLogin = void 0;
 var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
 var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
 var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
@@ -74,31 +74,30 @@ var postLogin = exports.postLogin = /*#__PURE__*/function () {
           });
         case 2:
           counter = _context.sent;
-          console.log(counter);
           name = req.body.name;
           user = new _User["default"]({
             name: name,
             answerArray: [],
             result: "",
             questNum: 1,
-            chosenChild: false
+            chosenChild: counter.seq % 50 == 0
           });
-          _context.prev = 6;
-          _context.next = 9;
+          _context.prev = 5;
+          _context.next = 8;
           return user.save();
-        case 9:
+        case 8:
           dbUser = _context.sent;
           return _context.abrupt("return", res.redirect("/".concat(dbUser.id, "/survey")));
-        case 13:
-          _context.prev = 13;
-          _context.t0 = _context["catch"](6);
+        case 12:
+          _context.prev = 12;
+          _context.t0 = _context["catch"](5);
           console.log(_context.t0);
           return _context.abrupt("return", res.redirect("/login"));
-        case 17:
+        case 16:
         case "end":
           return _context.stop();
       }
-    }, _callee, null, [[6, 13]]);
+    }, _callee, null, [[5, 12]]);
   }));
   return function postLogin(_x, _x2) {
     return _ref.apply(this, arguments);
@@ -191,8 +190,8 @@ var postSurvey = exports.postSurvey = /*#__PURE__*/function () {
         case 27:
           return _context3.abrupt("return", res.redirect("/".concat(id, "/survey")));
         case 30:
-          if (!(user.questNum == 15)) {
-            _context3.next = 36;
+          if (!(user.questNum == 12)) {
+            _context3.next = 38;
             break;
           }
           user.answerArray.push(choice);
@@ -202,16 +201,22 @@ var postSurvey = exports.postSurvey = /*#__PURE__*/function () {
           _context3.next = 35;
           return user.save();
         case 35:
+          if (!user.chosenChild) {
+            _context3.next = 37;
+            break;
+          }
+          return _context3.abrupt("return", prophescy(req, res));
+        case 37:
           return _context3.abrupt("return", res.redirect("/".concat(id, "/result")));
-        case 36:
+        case 38:
           user.answerArray.push(choice);
           user.questNum += 1;
-          _context3.next = 40;
+          _context3.next = 42;
           return user.save();
-        case 40:
+        case 42:
           console.log(user);
           return _context3.abrupt("return", res.redirect("/".concat(id, "/survey")));
-        case 42:
+        case 44:
         case "end":
           return _context3.stop();
       }
@@ -247,5 +252,25 @@ var result = exports.result = /*#__PURE__*/function () {
   }));
   return function result(_x7, _x8) {
     return _ref4.apply(this, arguments);
+  };
+}();
+var prophescy = exports.prophescy = /*#__PURE__*/function () {
+  var _ref5 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee5(req, res) {
+    var id;
+    return _regenerator["default"].wrap(function _callee5$(_context5) {
+      while (1) switch (_context5.prev = _context5.next) {
+        case 0:
+          id = req.params.id;
+          return _context5.abrupt("return", res.render('prophecy', {
+            id: id
+          }));
+        case 2:
+        case "end":
+          return _context5.stop();
+      }
+    }, _callee5);
+  }));
+  return function prophescy(_x9, _x10) {
+    return _ref5.apply(this, arguments);
   };
 }();

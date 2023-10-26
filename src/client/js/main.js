@@ -8,3 +8,4 @@ import "../img/logo.png";
 import "../scss/styles.scss";
 import "./result.js";
 import "./survey.js";
+
