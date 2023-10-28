@@ -16,7 +16,7 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _img_home_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../img/home.png */ \"./src/client/img/home.png\");\n/* harmony import */ var _img_background_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../img/background.jpg */ \"./src/client/img/background.jpg\");\n/* harmony import */ var _img_griffindor_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../img/griffindor.png */ \"./src/client/img/griffindor.png\");\n/* harmony import */ var _img_huffulepuff_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../img/huffulepuff.png */ \"./src/client/img/huffulepuff.png\");\n/* harmony import */ var _img_ravenclaw_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../img/ravenclaw.png */ \"./src/client/img/ravenclaw.png\");\n/* harmony import */ var _img_slyderin_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../img/slyderin.png */ \"./src/client/img/slyderin.png\");\n/* harmony import */ var _img_logo_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../img/logo.png */ \"./src/client/img/logo.png\");\n/* harmony import */ var _scss_styles_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../scss/styles.scss */ \"./src/client/scss/styles.scss\");\n/* harmony import */ var _result_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./result.js */ \"./src/client/js/result.js\");\n/* harmony import */ var _result_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_result_js__WEBPACK_IMPORTED_MODULE_8__);\n/* harmony import */ var _survey_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./survey.js */ \"./src/client/js/survey.js\");\n/* harmony import */ var _survey_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_survey_js__WEBPACK_IMPORTED_MODULE_9__);\n\n\n\n\n\n\n\n\n\n\n\n//# sourceURL=webpack://hoseowarts/./src/client/js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _img_home_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../img/home.png */ \"./src/client/img/home.png\");\n/* harmony import */ var _img_background_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../img/background.jpg */ \"./src/client/img/background.jpg\");\n/* harmony import */ var _img_griffindor_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../img/griffindor.png */ \"./src/client/img/griffindor.png\");\n/* harmony import */ var _img_huffulepuff_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../img/huffulepuff.png */ \"./src/client/img/huffulepuff.png\");\n/* harmony import */ var _img_ravenclaw_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../img/ravenclaw.png */ \"./src/client/img/ravenclaw.png\");\n/* harmony import */ var _img_slyderin_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../img/slyderin.png */ \"./src/client/img/slyderin.png\");\n/* harmony import */ var _img_logo_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../img/logo.png */ \"./src/client/img/logo.png\");\n/* harmony import */ var _img_logo2_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../img/logo2.png */ \"./src/client/img/logo2.png\");\n/* harmony import */ var _img_prophecy_jpg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../img/prophecy.jpg */ \"./src/client/img/prophecy.jpg\");\n/* harmony import */ var _scss_styles_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../scss/styles.scss */ \"./src/client/scss/styles.scss\");\n/* harmony import */ var _result_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./result.js */ \"./src/client/js/result.js\");\n/* harmony import */ var _result_js__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_result_js__WEBPACK_IMPORTED_MODULE_10__);\n/* harmony import */ var _survey_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./survey.js */ \"./src/client/js/survey.js\");\n/* harmony import */ var _survey_js__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_survey_js__WEBPACK_IMPORTED_MODULE_11__);\n\n\n\n\n\n\n\n\n\n\n\n\n\n//# sourceURL=webpack://hoseowarts/./src/client/js/main.js?");
 
 /***/ }),
 
@@ -103,6 +103,28 @@ eval("module.exports = __webpack_require__.p + \"images/huffulepuff.png\";\n\n//
 
 "use strict";
 eval("module.exports = __webpack_require__.p + \"images/logo.png\";\n\n//# sourceURL=webpack://hoseowarts/./src/client/img/logo.png?");
+
+/***/ }),
+
+/***/ "./src/client/img/logo2.png":
+/*!**********************************!*\
+  !*** ./src/client/img/logo2.png ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/logo2.png\";\n\n//# sourceURL=webpack://hoseowarts/./src/client/img/logo2.png?");
+
+/***/ }),
+
+/***/ "./src/client/img/prophecy.jpg":
+/*!*************************************!*\
+  !*** ./src/client/img/prophecy.jpg ***!
+  \*************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/prophecy.jpg\";\n\n//# sourceURL=webpack://hoseowarts/./src/client/img/prophecy.jpg?");
 
 /***/ }),
 

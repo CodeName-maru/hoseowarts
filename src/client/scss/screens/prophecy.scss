@@ -1,17 +1,32 @@
 #prophecy{
+    background: radial-gradient(ellipse,rgb(89,33,134) 55%,rgb(37,38,75));
     height: 100vh;
-    background-color: rgb(155 44 242);
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    
+    
+    
 }
 h1,h2,h3,h4,h5,h6{
     text-align: center;
 }
 #p_info{
-    height: 90%;
-    width: 90%;
-    border: 5px double;
-    border-color: white;
+    height: 100%;
+    width: 100%;
+    background-origin: padding-box;
+    background-image: url(../img/prophecy.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25);
+}
+
+#time{
+    font-size: 2rem;
+    position: absolute;
+    bottom: 6%;
+    width: 100%;
 }

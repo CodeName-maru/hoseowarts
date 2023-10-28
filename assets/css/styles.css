@@ -304,56 +304,58 @@ div.clickEffect {
 .result {
   height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  color: white;
+  color: black;
 }
 
 #griffindor {
-  background: radial-gradient(ellipse, rgb(238, 236, 227), 30%, tomato);
+  background: linear-gradient(to bottom, tomato, 70%, rgb(238, 236, 227));
 }
 
 #slyderin {
-  background: radial-gradient(ellipse, rgb(238, 236, 227), 30%, rgb(36, 93, 57));
+  background: linear-gradient(to bottom, rgb(36, 93, 57), 70%, rgb(238, 236, 227));
 }
 
 #huffulepuff {
-  background: radial-gradient(ellipse, rgb(238, 236, 227), 30%, rgb(245, 165, 29));
+  background: linear-gradient(to bottom, rgb(245, 165, 29), 70%, rgb(238, 236, 227));
 }
 
 #ravenclaw {
-  background: radial-gradient(ellipse, rgb(238, 236, 227), 30%, rgb(20, 49, 125));
+  background: linear-gradient(to bottom, rgb(20, 49, 125), 70%, rgb(238, 236, 227));
 }
 
-.result img {
-  height: 100%;
+#logo {
+  height: 18%;
+}
+
+#logo2 {
+  height: 40%;
 }
 
 #result {
-  height: 70%;
+  height: 100%;
+  width: 35%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   font-size: 4rem;
   font-family: "Metal Mania", cursive;
-  margin-bottom: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#feature {
+  width: 55%;
 }
 
 .dorm {
   width: 100%;
   text-align: center;
-  margin-bottom: 20%;
-}
-
-a {
-  font-family: "Metal Mania", cursive;
 }
 
 #prophecy {
+  background: radial-gradient(ellipse, rgb(89, 33, 134) 55%, rgb(37, 38, 75));
   height: 100vh;
-  background-color: rgb(155, 44, 242);
   color: white;
   display: flex;
   justify-content: center;
@@ -365,10 +367,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #p_info {
-  height: 90%;
-  width: 90%;
-  border: 5px double;
-  border-color: white;
+  height: 100%;
+  width: 100%;
+  background-origin: padding-box;
+  background-image: url(../images/prophecy.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25);
+}
+
+#time {
+  font-size: 2rem;
+  position: absolute;
+  bottom: 6%;
+  width: 100%;
 }
 
 table {
