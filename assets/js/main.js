@@ -36,7 +36,7 @@ eval("history.pushState(null, null, location.href);\nwindow.onpopstate = event =
   \*********************************/
 /***/ (() => {
 
-eval("function onClickPre() {\n  try {\n    document.querySelector('input[name=\"choice\"]:checked').value = 0;\n  } catch (_unused) {}\n  document.getElementById('submit').submit();\n}\nfunction onClickNext() {\n  var value = document.querySelector('input[name=\"choice\"]:checked').value;\n  document.getElementById('submit').submit();\n}\ndocument.querySelector('#pre').addEventListener('click', onClickPre);\ndocument.querySelector('#next').addEventListener('click', onClickNext);\n\n//# sourceURL=webpack://hoseowarts/./src/client/js/survey.js?");
+eval("function onClickPre() {\n  try {\n    document.querySelector('input[name=\"choice\"]:checked').value = 0;\n  } catch (_unused) {}\n  document.getElementById('submit').submit();\n}\nfunction onClickNext() {\n  var value = document.querySelector('input[name=\"choice\"]:checked').value;\n  document.getElementById('submit').submit();\n}\ndocument.querySelector('#pre').addEventListener('click', onClickPre);\ndocument.querySelector('#next').addEventListener('click', onClickNext);\nfunction clickEffect(e) {\n  var d = document.createElement(\"div\");\n  d.className = \"clickEffect\";\n  d.style.top = e.clientY + \"px\";\n  d.style.left = e.clientX + \"px\";\n  document.body.appendChild(d);\n  d.addEventListener('animationend', function () {\n    d.parentElement.removeChild(d);\n  }.bind(this));\n}\ndocument.addEventListener('click', clickEffect);\n\n//# sourceURL=webpack://hoseowarts/./src/client/js/survey.js?");
 
 /***/ }),
 

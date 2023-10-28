@@ -198,7 +198,7 @@ input[type=text] {
 
 span {
   display: block;
-  width: 80%;
+  width: 90%;
 }
 
 #question {
@@ -234,14 +234,7 @@ h1 {
   color: white;
 }
 
-#pre {
-  width: 3%;
-  font-size: 1.5rem;
-  border: 10px;
-  border-radius: 5%;
-}
-
-#next {
+#pre, #next {
   width: 3%;
   font-size: 1.5rem;
 }
@@ -282,6 +275,32 @@ label {
   border-radius: 5px;
 }
 
+div.clickEffect {
+  position: fixed;
+  box-sizing: border-box;
+  border: 5px solid rgb(242, 250, 149);
+  border-radius: 50%;
+  animation: clickEffect 0.3s ease-in-out;
+  z-index: 99999;
+  background-color: rgb(242, 250, 149);
+}
+
+@keyframes clickEffect {
+  0% {
+    opacity: 0.8;
+    width: 0.5em;
+    height: 0.5em;
+    margin: -0.25em;
+    border-width: 0.5em;
+  }
+  100% {
+    opacity: 0.001;
+    width: 5em;
+    height: 5em;
+    margin: -2.5em;
+    border-width: 0.03em;
+  }
+}
 .result {
   height: 100vh;
   display: flex;
@@ -348,7 +367,7 @@ h1, h2, h3, h4, h5, h6 {
 #p_info {
   height: 90%;
   width: 90%;
-  border: 2px solid;
+  border: 5px double;
   border-color: white;
 }
 
