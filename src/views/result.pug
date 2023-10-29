@@ -1,7 +1,7 @@
 extends base.pug
 
 block content
-    script var result = #{result} 
+    script var result = "#{result}"
     
     case result
         when 'griffindor'
@@ -10,28 +10,28 @@ block content
                     img#logo(src="/static/images/logo2.png")
                     img#logo2(src="/static/images/griffindor.png")
                     div.dorm Griffindor
-                div#feature
-
+                    a(href="/") End 
+     
         when 'slyderin'
             body#slyderin.result
                 div#result
                     img#logo(src="/static/images/logo2.png")
-                    img(src="/static/images/slyderin.png")
+                    img#logo2(src="/static/images/slyderin.png")
                     div.dorm Slyderin
-                div#feature
+                    a(href="/") End 
 
         when 'huffulepuff'
             body#huffulepuff.result
                 div#result
                     img#logo(src="/static/images/logo2.png")
-                    img(src="/static/images/huffulepuff.png")
+                    img#logo2(src="/static/images/huffulepuff.png")
                     div.dorm Huffulepuff
-                div#feature
+                    a(href="/") End 
 
         when 'ravenclaw'
             body#ravenclaw.result
                 div#result
                     img#logo(src="/static/images/logo2.png")
-                    img(src="/static/images/ravenclaw.png")
+                    img#logo2(src="/static/images/ravenclaw.png")
                     div.dorm Ravenclaw
-                div#feature
+                    a(href="/") End 

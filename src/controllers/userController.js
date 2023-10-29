@@ -8,9 +8,9 @@ import { query } from "express";
 function getMode(array,surveyCurrent){
     var dict = {
         1:"griffindor",
-        2:"slyderin",
-        3:"huffulepuff",
-        4:"ravenclaw",
+        2:"huffulepuff",
+        3:"ravenclaw",
+        4:"slyderin",
     }
 
     let result = 0;
@@ -78,9 +78,9 @@ export const postSurvey = async (req, res) => {
     const { choice } = req.body;
     const { id } = req.params;
     const griffindor = await User.countDocuments({result: 1})
-    const slyderin = await User.countDocuments({result: 2})
-    const huffulepuff= await User.countDocuments({result: 3})
-    const ravenclaw= await User.countDocuments({result: 4})
+    const huffulepuff = await User.countDocuments({result: 2})
+    const ravenclaw= await User.countDocuments({result: 3})
+    const slyderin= await User.countDocuments({result: 4})
     const surveyCurrent =[griffindor,slyderin,huffulepuff,ravenclaw]
     const user = await User.findById(id)
 
