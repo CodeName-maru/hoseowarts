@@ -7,12 +7,12 @@ html(lang = "ko")
         body#prophecy
             div#p_info
                 
-                h4#time 5
+                h4#time 8
         script.
 
             let t = document.querySelector("#time");
             setInterval(()=>t.innerText=t.innerText-1, 1000);
-            setTimeout(`location.href='/#{id}/result'`, 5500);
+            setTimeout(`location.href='/#{id}/result'`, 8500);
 
         
         
