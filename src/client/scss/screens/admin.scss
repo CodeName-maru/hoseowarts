@@ -1,4 +1,25 @@
+#admin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#table{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#table span{
+    text-align: center;
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: bolder;
+}
 table{
+    margin-top: 40px;
     border: 2px solid;
+    
 }
 th, td{border: 1px solid;padding: 10px 5px;}
