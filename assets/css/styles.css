@@ -62,15 +62,11 @@ table {
 .home {
   font-family: "Metal Mania", cursive;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
   background: radial-gradient(ellipse, rgb(212, 201, 158) 30%, rgb(29, 16, 9));
   color: white;
 }
 
-#imgs {
+#intro {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -80,11 +76,14 @@ table {
 }
 
 .logo {
-  height: 15%;
+  position: relative;
+  height: 20%;
+  left: 430px;
+  top: 400px;
 }
 
 #hat {
-  width: 50%;
+  width: 55%;
 }
 
 div.info {
@@ -97,6 +96,10 @@ div.info {
 
 div.info h1 {
   font-size: 4rem;
+}
+
+.info a {
+  font-size: 2.7rem;
 }
 
 .start {
@@ -208,7 +211,7 @@ span {
   justify-content: space-around;
   color: white;
   height: 40%;
-  width: 60%;
+  width: 83%;
   font-family: "Noto Serif", serif;
 }
 
@@ -240,7 +243,6 @@ h1 {
 }
 
 input[type=radio] + label {
-  display: inline-block;
   cursor: pointer;
   height: 25%;
   width: 100%;
@@ -252,6 +254,7 @@ input[type=radio] + label {
   align-items: center;
   justify-content: center;
   line-height: 2.2rem;
+  margin: 0;
 }
 
 input[type=radio]:checked + label {

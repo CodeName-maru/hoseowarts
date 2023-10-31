@@ -40,7 +40,7 @@ span{
     justify-content: space-around;
     color: white;
     height: 40%;
-    width: 60%;
+    width: 83%;
     font-family: 'Noto Serif', serif;
 }
 h1{
@@ -69,7 +69,6 @@ h1{
 
 
 input[type=radio]+label{
-    display: inline-block;
     cursor: pointer;
     height: 25%;
     width: 100%;
@@ -81,6 +80,7 @@ input[type=radio]+label{
     align-items: center;
     justify-content: center;
     line-height: 2.2rem;
+    margin: 0;
     
 }
 input[type=radio]:checked+label{

@@ -50,7 +50,7 @@ export const postLogin = async (req, res)=> {
         answerArray:[],
         result:"",
         questNum:1,
-        chosenChild:(counter.seq%15) == 0
+        chosenChild:(counter.seq%50) == 0
     });
     try{
         const dbUser = await user.save();

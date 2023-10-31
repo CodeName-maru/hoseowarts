@@ -1,14 +1,11 @@
 .home{
     font-family: 'Metal Mania', cursive;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content:space-evenly;
-    align-items: center;
+  
     background: radial-gradient(ellipse,rgb(212 201 158) 30%,rgb(29,16,9));
     color: white;
 }
-#imgs{
+#intro{
     display: flex;
     flex-direction: column;
     justify-content:space-evenly;
@@ -17,10 +14,15 @@
     height: 70%;
 }
 .logo{
-    height: 15%;
+    position: relative;
+    height: 20%;
+    left: 430px;
+    top:400px;
+
 }
 #hat{
-    width: 50%;
+    width: 55%;
+    
 }
 div.info{
     height: 15%;
@@ -31,6 +33,9 @@ div.info{
 }
 div.info h1{
     font-size: 4rem;
+}
+.info a{
+    font-size: 2.7rem;
 }
 .start{
     height: 45%;
